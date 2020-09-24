@@ -10,13 +10,13 @@ import android.widget.TextView;
 
 import java.util.ArrayList;
 
-public class adapter extends BaseAdapter {
+public class Adapter extends BaseAdapter {
 
     private LayoutInflater inflater;
-    private ArrayList<item> data;
+    private ArrayList<Item> data;
     private int layout;
 
-    public adapter(Context context, int layout, ArrayList<item> data){
+    public Adapter(Context context, int layout, ArrayList<Item> data){
         this.inflater = (LayoutInflater)context.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
         this.data = data;
         this.layout = layout;
@@ -36,7 +36,7 @@ public class adapter extends BaseAdapter {
         if(convertview == null)
             convertview = inflater.inflate(layout, parent, false);
 
-        item item = data.get(position);
+        Item item = data.get(position);
 
         ImageView image = convertview.findViewById(R.id.imageview);
         image.setImageResource(item.getImage());

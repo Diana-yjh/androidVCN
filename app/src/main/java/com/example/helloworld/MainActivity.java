@@ -14,15 +14,15 @@ public class MainActivity extends AppCompatActivity {
 
         ListView listView = findViewById(R.id.listview);
 
-        ArrayList<item> data = new ArrayList<>();
+        ArrayList<Item> data = new ArrayList<>();
         //item bill = new item(R.drawable.bill, "bill");
-        data.add(new item(R.drawable.bill, "bill"));
-        data.add(new item(R.drawable.lilly, "lilly"));
-        data.add(new item(R.drawable.scarlet, "scarlet"));
-        data.add(new item(R.drawable.oyster, "oyster"));
-        data.add(new item(R.drawable.bindweed, "bindweed"));
+        data.add(new Item(R.drawable.bill, "bill"));
+        data.add(new Item(R.drawable.lilly, "lilly"));
+        data.add(new Item(R.drawable.scarlet, "scarlet"));
+        data.add(new Item(R.drawable.oyster, "oyster"));
+        data.add(new Item(R.drawable.bindweed, "bindweed"));
 
-        adapter adapter = new adapter(this, R.layout.list_item, data);//this = ?
+        Adapter adapter = new Adapter(this, R.layout.list_item, data);//this = ?
         listView.setAdapter(adapter);//xml파일에서 배치한 listView를 참조하기 위해 아답터를 설정
     }
 }
