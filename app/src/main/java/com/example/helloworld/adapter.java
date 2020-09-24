@@ -44,14 +44,6 @@ public class adapter extends BaseAdapter {
         TextView flowername = convertview.findViewById(R.id.textview);
         flowername.setText(item.getFlowername());
 
-//        FatherName fatherName;
-//
-//        fatherName;
-//
-//        fatherName.getItem();
-//   static ==>     FatherName.getItem();
-
         return convertview;
     }
-
 }
